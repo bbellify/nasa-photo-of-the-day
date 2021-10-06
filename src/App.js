@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <p>
-        <span role="img" aria-label='go!'>🚀</span>!
+        <span role="img" aria-label='go!'>🚀</span>
       </p>
       <GetPhoto />
     </div>
