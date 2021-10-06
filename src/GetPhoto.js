@@ -20,10 +20,13 @@ export default function GetPhoto(props) {
         }).catch(err =>
             console.error(err))
     }, [])
+    if (!photo) return <h2>Loading...</h2>
     return (
-        <div className = 'contentContainer'>
-            <img src={photo} alt='NASA astronomy pic of the day'></img>
-            <div className = 'copy'>
+        <div className = 'container'>
+            <div className = 'photoContainer'>
+                <img src={photo} alt='NASA astronomy pic of the day'></img>
+            </div>
+            <div className = 'copyContainer'>
                 <Title title={title}/>
                 <Explanation explanation={explanation}/>
             </div>
