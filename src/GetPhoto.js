@@ -3,6 +3,7 @@ import "./App.css";
 import { BASE_URL, API_KEY } from './constants';
 import axios from 'axios';
 import Title from './Title';
+import Explanation from "./Explanation";
 
 export default function GetPhoto(props) {
     const [photo, setPhoto] = useState('')
@@ -24,7 +25,7 @@ export default function GetPhoto(props) {
             <img src={photo} alt='NASA astronomy pic of the day'></img>
             <div className = 'copy'>
                 <Title title={title}/>
-                <p>DESCRIPTION</p>
+                <Explanation explanation={explanation}/>
             </div>
         </div>
     )
