@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
-import Photo from './Photo'
+import GetPhoto from './GetPhoto'
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have hella fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
-      {/* <Photo /> */}
+      <GetPhoto />
     </div>
   );
 }
