@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
-import { BASE_URL, API_KEY } from './constants'
+import Photo from './Photo'
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have hella fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
-      {console.log(`${BASE_URL}`)}
+      {/* <Photo /> */}
     </div>
   );
 }
