@@ -4,6 +4,25 @@ import { BASE_URL, API_KEY } from './constants';
 import axios from 'axios';
 import Title from './Title';
 import Explanation from "./Explanation";
+import styled from 'styled-components';
+
+const Card = styled.div`
+    padding: 10px;
+    border: 15px solid black;
+    border-radius: 30px;
+    background-color: #545454;
+    padding: 4%;
+    width:auto;
+
+`
+const CopyContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 30px;
+    margin: 4% 0;
+    padding: 2% 0;
+`
 
 export default function GetPhoto(props) {
     const [photo, setPhoto] = useState('')
@@ -22,14 +41,14 @@ export default function GetPhoto(props) {
     }, [])
     if (!photo) return <h2>Loading...</h2>
     return (
-        <div className = 'container'>
+        <Card>
             <div className = 'photoContainer'>
-                <img src={photo} alt='NASA astronomy pic of the day'></img>
+                <img src={photo} alt='NASA astronomy pic of the day' style={{ border: '1px solid black'}}></img>
             </div>
-            <div className = 'copyContainer'>
+            <CopyContainer>
                 <Title title={title}/>
                 <Explanation explanation={explanation}/>
-            </div>
-        </div>
+            </CopyContainer>
+        </Card>
     )
 }
