@@ -11,8 +11,10 @@ const Card = styled.div`
     border: 15px solid black;
     border-radius: 30px;
     background-color: #545454;
-    padding: 4%;
+    padding: 2.5%;
     width:auto;
+    display:flex;
+    flex-direction:column;
 
 `
 const CopyContainer = styled.div`
@@ -21,7 +23,9 @@ const CopyContainer = styled.div`
     background-color: white;
     border-radius: 30px;
     margin: 4% 0;
-    padding: 2% 0;
+    padding: 2%;
+    max-width: 100%;
+    word-wrap: wrap;
 `
 
 export default function GetPhoto(props) {
