@@ -1,14 +1,26 @@
 import React from "react";
-import "./App.css";
+// import "./App.css";
+import GetPhoto from './GetPhoto'
+import styled from 'styled-components'
+
+const Container = styled.div`
+  background: #150c25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2%;
+  margin: 0;
+`
 
 function App() {
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+    <Container>
+      <p style={{ padding:20, margin:0}}>
+        <span role="img" aria-label='go!'>🚀</span>
       </p>
-    </div>
+      <GetPhoto />
+    </Container>
   );
 }
 
