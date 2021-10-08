@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+// import "./App.css";
 import { BASE_URL, API_KEY } from './constants';
 import axios from 'axios';
 import Title from './Title';
@@ -11,21 +11,27 @@ const Card = styled.div`
     border: 15px solid black;
     border-radius: 30px;
     background-color: #545454;
-    padding: 2.5%;
-    width:auto;
+    padding: 4%;
+    width: 40%;
     display:flex;
     flex-direction:column;
+    align-items: center;
 
 `
 const CopyContainer = styled.div`
     display: flex;
     flex-direction: column;
     background-color: white;
-    border-radius: 30px;
+    border-radius: 20px;
+    width: 85%;
     margin: 4% 0;
-    padding: 2%;
-    max-width: 100%;
-    word-wrap: wrap;
+    padding: 4% 0;
+`
+const Image = styled.img`
+    width: 85%;
+    border: 1px solid black;
+    border-radius: 20px;
+
 `
 
 export default function GetPhoto(props) {
@@ -47,7 +53,7 @@ export default function GetPhoto(props) {
     return (
         <Card>
             <div className = 'photoContainer'>
-                <img src={photo} alt='NASA astronomy pic of the day' style={{ border: '1px solid black'}}></img>
+                <Image src={photo} alt='NASA astronomy pic of the day'></Image>
             </div>
             <CopyContainer>
                 <Title title={title}/>

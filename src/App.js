@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+// import "./App.css";
 import GetPhoto from './GetPhoto'
 import styled from 'styled-components'
 
